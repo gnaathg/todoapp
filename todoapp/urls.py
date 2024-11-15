@@ -21,4 +21,9 @@ from task import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',views.SignUpView.as_view(),name="signup"),
+    path('login/',views.SigninView.as_view(),name='signin'),
+    path('index/',views.IndexView.as_view(),name ="index"),
+    path('todo/<int:id>/remove/',views.ToDoDeleteView.as_view(),name ="todo-delete"),
+    path('todo/<int:id>/update/',views.ToUpdateView.as_view(),name ="todo-update")
 ]
+
